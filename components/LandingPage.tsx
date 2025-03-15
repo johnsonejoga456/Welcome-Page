@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { Tilt } from "react-tilt";
+import Tilt from "react-parallax-tilt"; // ✅ Updated import
 
 export default function SplashScreen() {
   const [typedText, setTypedText] = useState("");
@@ -66,7 +66,7 @@ export default function SplashScreen() {
       ))}
 
       {/* Animated Title with Consistent Button Format */}
-      <Tilt options={{ max: 15, speed: 300, scale: 1.05 }}>
+      <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05} transitionSpeed={300}>
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export default function SplashScreen() {
       </motion.p>
 
       {/* Styled Continue Button with Consistent Font */}
-      <Tilt options={{ max: 25, speed: 300, scale: 1.05 }}>
+      <Tilt tiltMaxAngleX={25} tiltMaxAngleY={25} scale={1.05} transitionSpeed={300}>
         <motion.button
           whileHover={{ scale: 1.05, backgroundColor: "#D84332" }}
           whileTap={{ scale: 0.95 }}

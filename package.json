@@ -14,7 +14,7 @@
     "next": "15.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-tilt": "^1.0.2"
+    "react-parallax-tilt": "^1.7.286"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
